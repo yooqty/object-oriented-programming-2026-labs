@@ -1,6 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <sstream>
+#include "personapi.h"
 
 
 int main() {
@@ -8,6 +10,21 @@ int main() {
     std::string line;
 
     while (std::getline(file,line)) {
-        std::cout << line << '\n';
+        std::string word;
+        Person person;
+
+    std::stringstream ss(line);
+    ss >> person.firstname;
+    ss >> person.surname;
+    ss >> word;
+    person.birthyear = std::stoi(word);
+
+    std::cout << person.firstname << " " <<
+                 person.surname << " " <<
+                 person.birthyear << " " <<
+                 getPersonCategory(person) << "\n";
+
     }
+
+    return 0;
 }
