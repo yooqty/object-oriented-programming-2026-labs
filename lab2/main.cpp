@@ -47,7 +47,7 @@ int main() {
     
     std::cout << "=== Flights within the given interval ===\n";
 
-    // Set the interval directly in the program text
+    // Interval
     MyTime from(12, 00, 00);
     MyTime to(13, 30, 00);
     std::cout << "Interval: ";
