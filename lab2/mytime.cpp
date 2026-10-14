@@ -22,7 +22,7 @@ void MyTime::normalize() {
 }
 
 void MyTime::info() {
-    // Print with leading zeros, e.g. 05:02:09
+    // Print with leading zeros
     std::cout << std::setfill('0') << std::setw(2) << hour << ":"
               << std::setfill('0') << std::setw(2) << min  << ":"
               << std::setfill('0') << std::setw(2) << sec  << "\n";
