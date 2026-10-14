@@ -14,7 +14,7 @@ MyTime::MyTime(int _hour, int _min, int _sec) {
 // Bring the time to a "normal" form: 0..23 h, 0..59 min, 0..59 sec
 void MyTime::normalize() {
     int total = toSeconds();
-    // Reduce to the 24-hour range (0..86399)
+    // Reduce to the 24-hour range
     total = ((total % 86400) + 86400) % 86400;
     hour = total / 3600;
     min  = (total % 3600) / 60;
