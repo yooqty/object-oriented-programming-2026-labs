@@ -11,10 +11,10 @@ MyTime::MyTime(int _hour, int _min, int _sec) {
 	normalize();
 }
 
-// Bring the time to a "normal" form: 0..23 h, 0..59 min, 0..59 sec
+// Bring the time to a "normal" form: 0-23 h, 0-59 min, 0-59 sec
 void MyTime::normalize() {
     int total = toSeconds();
-    // Reduce to the 24-hour range (0..86399)
+    // Reduce to the 24-hour range
     total = ((total % 86400) + 86400) % 86400;
     hour = total / 3600;
     min  = (total % 3600) / 60;
@@ -22,7 +22,7 @@ void MyTime::normalize() {
 }
 
 void MyTime::info() {
-    // Print with leading zeros, e.g. 05:02:09
+    // Print with leading zeros
     std::cout << std::setfill('0') << std::setw(2) << hour << ":"
               << std::setfill('0') << std::setw(2) << min  << ":"
               << std::setfill('0') << std::setw(2) << sec  << "\n";
