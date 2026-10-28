@@ -30,7 +30,6 @@ std::ostream& operator<<(std::ostream& os, const Fraction& f)
     return os;
 }
 
-// ================= Added code =================
 
 double Fraction::toDouble() const
 {
