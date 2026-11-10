@@ -11,7 +11,6 @@ public:
     Fraction(int num, int den);
     Fraction operator+(Fraction f2);
 
-    // ================= Added code =================
     double toDouble() const;
     void normalize();
 	
@@ -26,6 +25,7 @@ public:
     Fraction operator/(int n) const;
 };
 
+// for int on the left
 Fraction operator+(int n, const Fraction& f);
 Fraction operator-(int n, const Fraction& f);
 Fraction operator*(int n, const Fraction& f);

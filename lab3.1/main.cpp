@@ -11,7 +11,6 @@ int main()
     f1 = f2 + f3;
     cout << f1 << "\n";
 
-    // ================= Added code =================
 
     cout << "\n--- toDouble / normalize ---\n";
     Fraction a(4, 8);
