@@ -7,8 +7,11 @@
 #include <cstdio>
 
 int main() {
-    std::cout << "=== 1. Creating figures ===\n";
-    Rectangle r1(0, 0, 10, 5);
+	std::system("cd");
+	
+	std::cout << "\n=== 1. Creating figures ===\n";
+	
+	Rectangle r1(0, 0, 10, 5);
     Triangle  t1(0, 0, 4, 0, 0, 3);
     Rectangle r2(1, 2, 8, 9);
 
@@ -69,5 +72,9 @@ int main() {
     std::cout << "\n=== 8. Destroying the vector - files are removed ===\n";
     figures.clear();
     std::cout << "Done. Check that the files have disappeared from the working folder.\n";
+    
+    std::cout << "\nPress Enter to exit...";
+	std::cin.get();
+
     return 0;
 }

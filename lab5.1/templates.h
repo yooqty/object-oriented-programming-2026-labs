@@ -49,12 +49,6 @@ T valueRange(T* arr, int n)
     return maxValue(arr, n) - minValue(arr, n);
 }
 
-template <>
-double valueRange<double>(double* arr, int n)
-{
-    return maxValue(arr, n) - minValue(arr, n);
-}
-
 template <class T>
 bool isInRange(const T& value, const T& lo, const T& hi)
 {

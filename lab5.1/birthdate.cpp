@@ -52,13 +52,6 @@ BirthDate BirthDate::operator+(const BirthDate& other) const
     return BirthDate(days + 1, m, y);
 }
 
-BirthDate BirthDate::operator/(int n) const
-{
-    BirthDate zero(1, 1, 2000);
-    int total = toDays(*this) + toDays(zero) * (n - 1);
-    return BirthDate(1,1,2000) + BirthDate(1,1,2000);
-}
-
 int BirthDate::operator-(const BirthDate& other) const
 {
     return toDays(*this) - toDays(other);
