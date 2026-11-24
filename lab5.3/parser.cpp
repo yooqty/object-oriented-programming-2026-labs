@@ -77,14 +77,14 @@ Record parseRecord(const std::string& line, long lineNumber)
 
     Record r;
 
-    r.index      = toLong(tokens[0], "index", lineNumber);
-    r.vesselId   = static_cast<int>(toLong(tokens[1], "vessel id", lineNumber));
-    r.latitude   = toDouble(tokens[2], "latitude", lineNumber);
-    r.longitude  = toDouble(tokens[3], "longitude", lineNumber);
-    r.speedRaw   = static_cast<int>(toLong(tokens[4], "speed", lineNumber));
-    r.course     = static_cast<int>(toLong(tokens[5], "course", lineNumber));
+    r.index = toLong(tokens[0], "index", lineNumber);
+    r.vesselId = static_cast<int>(toLong(tokens[1], "vessel id", lineNumber));
+    r.latitude = toDouble(tokens[2], "latitude", lineNumber);
+    r.longitude = toDouble(tokens[3], "longitude", lineNumber);
+    r.speedRaw = static_cast<int>(toLong(tokens[4], "speed", lineNumber));
+    r.course = static_cast<int>(toLong(tokens[5], "course", lineNumber));
     r.ageMinutes = static_cast<int>(toLong(tokens[6], "age", lineNumber));
-    r.dateTime   = tokens[7] + " " + tokens[8];
+    r.dateTime = tokens[7] + " " + tokens[8];
 
     // validate latitude range
     if (r.latitude < -90.0 || r.latitude > 90.0)
