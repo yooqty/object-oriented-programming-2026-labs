@@ -42,7 +42,7 @@ void DronDataContainer<T>::cleanContainer() {
 
 template <class T>
 void DronDataContainer<T>::sortData() {
-    // insertion sort — works for any T with operator<
+    // insertion sort
     for (int i = 1; i < dataCounter; ++i) {
         T key = data[i];
         int j = i - 1;
