@@ -1,0 +1,10 @@
+data/data1.txt
+data/data2.txt
+data/data3.txt
+data/data4.txt
+data/bad_format.txt
+data/bad_record.txt
+data/bad_speed.txt
+data/bad_course.txt
+data/bad_lat.txt
+data/bad_lon.txt
