@@ -18,7 +18,6 @@ public:
     int getTemperature() const;
     double getDepth() const;
 
-    // comparison criterion. Uncomment the desired variant.
     bool operator<(DronData data) const;
 
     friend std::ostream& operator<<(std::ostream& os, const DronData& d);
